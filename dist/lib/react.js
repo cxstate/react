@@ -12,9 +12,9 @@ var __assign = (this && this.__assign) || function () {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = require("react");
-var _1 = require(".");
+var cxstate_1 = require("@cxstate/cxstate");
 function useMachine(machineDef) {
-    var service = react_1.useState(function () { return _1.interpret(machineDef); })[0];
+    var service = react_1.useState(function () { return cxstate_1.interpret(machineDef); })[0];
     var _a = react_1.useState({
         path: service.path(),
         context: service.context(),

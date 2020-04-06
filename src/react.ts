@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { interpret } from '.';
-import { MachineDef, Service, SendFn, CurrentMachineState } from './types';
+import { MachineDef, Service, SendFn, CurrentMachineState, interpret } from '@cxstate/cxstate';
 
 interface HookState<ContextType> {
   path: string

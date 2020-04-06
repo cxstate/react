@@ -1,3 +1,3 @@
-# CxState APIs
+# CxState React Hook API
 
 *COMING SOON*

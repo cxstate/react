@@ -1,31 +1,32 @@
-import { useEffect, useState } from 'react';
-import { MachineDef, Service, SendFn, CurrentMachineState, interpret } from '@cxstate/cxstate';
+import { useEffect, useState } from 'react'
+import { MachineDef, Service, SendFn, CurrentMachineState, interpret } from '@cxstate/cxstate'
 
 interface HookState<ContextType> {
   path: string
-  context: ContextType;
+  context: Readonly<ContextType>
 }
 
-export function useMachine<ContextType>(machineDef: MachineDef<ContextType>) :[CurrentMachineState<ContextType>, SendFn] {
-  const [service] = useState<Service<ContextType>>(
-    () => interpret<ContextType>(machineDef),
-  );
+export function useMachine<ContextType>(
+  machineDef: MachineDef<ContextType>
+): [CurrentMachineState<ContextType>, SendFn] {
+  const [service] = useState<Service<ContextType>>(() => interpret<ContextType>(machineDef))
   const [state, setState] = useState<HookState<ContextType>>({
     path: service.path(),
-    context: service.context(),
-  });
+    context: service.context()
+  })
   useEffect(
-    () => service.onTransition((context: ContextType, path: string) => {
-      setState({context, path});
-    }),
-    [service, setState],
-  );
+    () =>
+      service.onTransition((context: ContextType, path: string) => {
+        setState({ context, path })
+      }),
+    [service, setState]
+  )
   return [
     {
       ...state,
       matchesOne: service.matchesOne,
-      matchesNone: service.matchesNone,
+      matchesNone: service.matchesNone
     },
-    service.send,
-  ];
+    service.send
+  ]
 }

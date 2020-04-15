@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react'
 import { MachineDef, Service, SendFn, CurrentMachineState, interpret } from '@cxstate/cxstate'
 
-interface HookState<ContextType> {
+interface HookState<TContext> {
   path: string
-  context: Readonly<ContextType>
+  context: Readonly<TContext>
 }
 
-export function useMachine<ContextType>(
-  machineDef: MachineDef<ContextType>
-): [CurrentMachineState<ContextType>, SendFn] {
-  const [service] = useState<Service<ContextType>>(() => interpret<ContextType>(machineDef))
-  const [state, setState] = useState<HookState<ContextType>>({
+export function useMachine<TContext>(
+  machineDef: MachineDef<TContext>
+): [CurrentMachineState<TContext>, SendFn] {
+  const [service] = useState<Service<TContext>>(() => interpret<TContext>(machineDef))
+  const [state, setState] = useState<HookState<TContext>>({
     path: service.path(),
     context: service.context()
   })
   useEffect(
     () =>
-      service.onTransition((context: ContextType, path: string) => {
+      service.onTransition((context: TContext, path: string) => {
         setState({ context, path })
       }),
     [service, setState]

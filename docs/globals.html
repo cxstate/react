@@ -2722,10 +2722,31 @@ img {
 <nav class="tsd-navigation secondary">
 	<ul>
 		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/currentparallelstate.html" class="tsd-kind-icon">Current<wbr>Parallel<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/currentstate.html" class="tsd-kind-icon">Current<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/currentstatebase.html" class="tsd-kind-icon">Current<wbr>State<wbr>Base</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
 			<a href="interfaces/hookstate.html" class="tsd-kind-icon">Hook<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/hookstatebase.html" class="tsd-kind-icon">Hook<wbr>State<wbr>Base</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/parallelhookstate.html" class="tsd-kind-icon">Parallel<wbr>Hook<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="interfaces/parallelmachinedef.html" class="tsd-kind-icon">Parallel<wbr>Machine<wbr>Def</a>
 		</li>
 		<li class=" tsd-kind-function tsd-has-type-parameter">
 			<a href="globals.html#usemachine" class="tsd-kind-icon">use<wbr>Machine</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="globals.html#usemachines" class="tsd-kind-icon">use<wbr>Machines</a>
 		</li>
 	</ul>
 </nav>
@@ -2769,13 +2790,20 @@ send&lt;DoEvent&gt;(<span class="hljs-string">'DO_SOMETHING'</span>, {<span clas
 					<section class="tsd-index-section ">
 						<h3>Interfaces</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/currentparallelstate.html" class="tsd-kind-icon">Current<wbr>Parallel<wbr>State</a></li>
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/currentstate.html" class="tsd-kind-icon">Current<wbr>State</a></li>
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/currentstatebase.html" class="tsd-kind-icon">Current<wbr>State<wbr>Base</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/hookstate.html" class="tsd-kind-icon">Hook<wbr>State</a></li>
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/hookstatebase.html" class="tsd-kind-icon">Hook<wbr>State<wbr>Base</a></li>
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/parallelhookstate.html" class="tsd-kind-icon">Parallel<wbr>Hook<wbr>State</a></li>
+							<li class="tsd-kind-interface tsd-has-type-parameter"><a href="interfaces/parallelmachinedef.html" class="tsd-kind-icon">Parallel<wbr>Machine<wbr>Def</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Functions</h3>
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#usemachine" class="tsd-kind-icon">use<wbr>Machine</a></li>
+							<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#usemachines" class="tsd-kind-icon">use<wbr>Machines</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2787,28 +2815,62 @@ send&lt;DoEvent&gt;(<span class="hljs-string">'DO_SOMETHING'</span>, {<span clas
 				<a name="usemachine" class="tsd-anchor"></a>
 				<h3>use<wbr>Machine</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-					<li class="tsd-signature tsd-kind-icon">use<wbr>Machine&lt;ContextType&gt;<span class="tsd-signature-symbol">(</span>machineDef<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MachineDef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ContextType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">CurrentMachineState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ContextType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></li>
+					<li class="tsd-signature tsd-kind-icon">use<wbr>Machine&lt;TContext&gt;<span class="tsd-signature-symbol">(</span>machineDef<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">MachineDef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="interfaces/currentstate.html" class="tsd-signature-type">CurrentState</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/cxstate/react/blob/cbbe4b0/src/react.ts#L9">react.ts:9</a></li>
+								<li>Defined in <a href="https://github.com/cxstate/react/blob/574683f/src/react.ts#L48">react.ts:48</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
 							<li>
-								<h4>ContextType</h4>
+								<h4>TContext</h4>
 							</li>
 						</ul>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>machineDef: <span class="tsd-signature-type">MachineDef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ContextType</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<h5>machineDef: <span class="tsd-signature-type">MachineDef</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">CurrentMachineState</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">ContextType</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="interfaces/currentstate.html" class="tsd-signature-type">CurrentState</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+				<a name="usemachines" class="tsd-anchor"></a>
+				<h3>use<wbr>Machines</h3>
+				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+					<li class="tsd-signature tsd-kind-icon">use<wbr>Machines&lt;TContextIntersection&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>machineDefs<span class="tsd-signature-symbol">: </span><a href="interfaces/parallelmachinedef.html" class="tsd-signature-type">ParallelMachineDef</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContextIntersection</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">[</span><a href="interfaces/currentparallelstate.html" class="tsd-signature-type">CurrentParallelState</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContextIntersection</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/cxstate/react/blob/574683f/src/react.ts#L76">react.ts:76</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>TContextIntersection is expected to be an intersection type of all contexts: ...&amp;...</p>
+							</div>
+						</div>
+						<h4 class="tsd-type-parameters-title">Type parameters</h4>
+						<ul class="tsd-type-parameters">
+							<li>
+								<h4>TContextIntersection</h4>
+							</li>
+						</ul>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>machineDefs: <a href="interfaces/parallelmachinedef.html" class="tsd-signature-type">ParallelMachineDef</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContextIntersection</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">[</span><a href="interfaces/currentparallelstate.html" class="tsd-signature-type">CurrentParallelState</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContextIntersection</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">SendFn</span><span class="tsd-signature-symbol">]</span></h4>
 					</li>
 				</ul>
 			</section>

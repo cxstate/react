@@ -38,17 +38,21 @@ function useMachines() {
     for (var _i = 0; _i < arguments.length; _i++) {
         machineDefs[_i] = arguments[_i];
     }
-    var parallelService = react_1.useState(function () { return cxstate_1.parallelize.apply(void 0, machineDefs.map(cxstate_1.interpret)); })[0];
+    var parallelService = react_1.useState(function () {
+        return cxstate_1.parallelize.apply(void 0, machineDefs.map(cxstate_1.interpret));
+    })[0];
     var _a = react_1.useState({
         paths: parallelService.paths(),
-        context: parallelService.context(),
+        context: parallelService.context()
     }), state = _a[0], setState = _a[1];
-    react_1.useEffect(function () { return parallelService.onTransition(function (context, paths) {
-        setState({ context: context, paths: paths });
-    }); }, [parallelService, setState]);
+    react_1.useEffect(function () {
+        return parallelService.onTransition(function (context, paths) {
+            setState({ context: context, paths: paths });
+        });
+    }, [parallelService, setState]);
     return [
         __assign(__assign({}, state), { matchesOne: parallelService.matchesOne, matchesNone: parallelService.matchesNone }),
-        parallelService.send,
+        parallelService.send
     ];
 }
 exports.useMachines = useMachines;

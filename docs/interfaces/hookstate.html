@@ -2721,10 +2721,19 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="currentparallelstate.html" class="tsd-kind-icon">Current<wbr>Parallel<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="currentstate.html" class="tsd-kind-icon">Current<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="currentstatebase.html" class="tsd-kind-icon">Current<wbr>State<wbr>Base</a>
+		</li>
 		<li class="current tsd-kind-interface tsd-has-type-parameter">
 			<a href="hookstate.html" class="tsd-kind-icon">Hook<wbr>State</a>
 			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface">
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 					<a href="hookstate.html#context" class="tsd-kind-icon">context</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
@@ -2732,8 +2741,20 @@ img {
 				</li>
 			</ul>
 		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="hookstatebase.html" class="tsd-kind-icon">Hook<wbr>State<wbr>Base</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="parallelhookstate.html" class="tsd-kind-icon">Parallel<wbr>Hook<wbr>State</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-has-type-parameter">
+			<a href="parallelmachinedef.html" class="tsd-kind-icon">Parallel<wbr>Machine<wbr>Def</a>
+		</li>
 		<li class=" tsd-kind-function tsd-has-type-parameter">
 			<a href="../globals.html#usemachine" class="tsd-kind-icon">use<wbr>Machine</a>
+		</li>
+		<li class=" tsd-kind-function tsd-has-type-parameter">
+			<a href="../globals.html#usemachines" class="tsd-kind-icon">use<wbr>Machines</a>
 		</li>
 	</ul>
 </nav>
@@ -2743,7 +2764,7 @@ img {
 			<h3>Type parameters</h3>
 			<ul class="tsd-type-parameters">
 				<li>
-					<h4>ContextType</h4>
+					<h4>TContext</h4>
 				</li>
 			</ul>
 		</section>
@@ -2751,7 +2772,12 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">HookState</span>
+					<a href="hookstatebase.html" class="tsd-signature-type">HookStateBase</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span>
+					<ul class="tsd-hierarchy">
+						<li>
+							<span class="target">HookState</span>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</section>
@@ -2762,7 +2788,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="hookstate.html#context" class="tsd-kind-icon">context</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hookstate.html#context" class="tsd-kind-icon">context</a></li>
 							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="hookstate.html#path" class="tsd-kind-icon">path</a></li>
 						</ul>
 					</section>
@@ -2771,13 +2797,14 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
 				<a name="context" class="tsd-anchor"></a>
 				<h3>context</h3>
-				<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ContextType</span></div>
+				<div class="tsd-signature tsd-kind-icon">context<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">TContext</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
+					<p>Inherited from <a href="hookstatebase.html">HookStateBase</a>.<a href="hookstatebase.html#context">context</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/cxstate/react/blob/cbbe4b0/src/react.ts#L6">react.ts:6</a></li>
+						<li>Defined in <a href="https://github.com/cxstate/react/blob/574683f/src/react.ts#L13">react.ts:13</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2787,7 +2814,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/cxstate/react/blob/cbbe4b0/src/react.ts#L5">react.ts:5</a></li>
+						<li>Defined in <a href="https://github.com/cxstate/react/blob/574683f/src/react.ts#L17">react.ts:17</a></li>
 					</ul>
 				</aside>
 			</section>
